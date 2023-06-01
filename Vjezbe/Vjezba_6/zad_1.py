@@ -1,3 +1,4 @@
-import harmonic_oscillator as h_o
+from harmonic_oscillator import HarmonicOscillator
 
-oscilator = h_o.HarmonicOscillator(m=1.2, k=2, x0=0, v0=6.7, dt=0.01, t=20)
+oscilator = HarmonicOscillator(m=1.2, k=2, x0=0, v0=6.7, dt=0.01, t=20.0)
+oscilator.plot_trajectory()

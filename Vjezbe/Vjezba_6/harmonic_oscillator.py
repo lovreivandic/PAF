@@ -52,4 +52,11 @@ class HarmonicOscillator:
         plt.tight_layout()
         plt.show()
         
-#imam trenutno problema sa racunanjem perioda titranja. vratit cu se tome kad izvrsim sve obaveze u sklopu ovog predmeta. vec sam cijeli dan izgubio na jednu vjezbu.
+    def period_titranja(self):
+        t1 = 0
+        for i in range(1, len(self.v)):
+            if self.v[i] * self.v[i-1] < 0:
+                if t1 == 0:
+                    t1 = i * self.dt
+                else:
+                    return 2 * (i * self.dt - t1)
